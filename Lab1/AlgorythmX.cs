@@ -3,20 +3,19 @@ using System.Collections.Generic;
 
 namespace Lab1 {
     public class AlgorythmX {
-        private Dictionary<int, HashSet<int>> columns;
-        private List<List<int>> rows;
-        private Stack<int> answer;
-        private Stack<HashSet<int>> deletedColumns;
-        private bool solved;
-        
+        private Dictionary<int, HashSet<int>> _columns;
+        private List<List<int>> _rows;
+        private Stack<int> _answer;
+        private Stack<HashSet<int>> _deletedColumns;
+        private bool _solved;
 
         public AlgorythmX(int[,] matrix) {
-            rows = new List<List<int>>();
-            columns = new Dictionary<int, HashSet<int>>();
-            answer = new Stack<int>();
-            deletedColumns = new Stack<HashSet<int>>();
-            solved = false;
-            
+            _rows = new List<List<int>>();
+            _columns = new Dictionary<int, HashSet<int>>();
+            _answer = new Stack<int>();
+            _deletedColumns = new Stack<HashSet<int>>();
+            _solved = false;
+
             int colsCount = matrix.GetUpperBound(1) + 1;
             int rowsCount = matrix.GetUpperBound(0) + 1;
             for (int i = 0; i < rowsCount; i++) {
@@ -24,10 +23,10 @@ namespace Lab1 {
                 for (int j = 0; j < colsCount; j++) {
                     if (matrix[i, j] != 0) {
                         if (isEmpty) {
-                            rows.Add(new List<int>());
+                            _rows.Add(new List<int>());
                             isEmpty = false;
                         }
-                        rows[i].Add(j);
+                        _rows[i].Add(j);
                     }
                 }
             }
@@ -35,84 +34,105 @@ namespace Lab1 {
             for (int j = 0; j < colsCount; j++) {
                 for (int i = 0; i < rowsCount; i++) {
                     if (matrix[i, j] != 0) {
-                        if (!columns.ContainsKey(j)) {
-                            columns[j] = new HashSet<int>();
+                        if (!_columns.ContainsKey(j)) {
+                            _columns[j] = new HashSet<int>();
                         }
-                        columns[j].Add(i);
+                        _columns[j].Add(i);
                     }
                 }
             }
         }
 
         private void ExtractRow(int row) {
-            foreach (var column in rows[row]) {
-                var columnElements = new HashSet<int>(columns[column]);
-                deletedColumns.Push(columnElements);
+            foreach (var column in _rows[row]) {
+                var columnElements = new HashSet<int>(_columns[column]);
+                _deletedColumns.Push(columnElements);
                 foreach (var deletingRow in columnElements) {
-                    foreach (var columnContainsDeletingRow in rows[deletingRow]) {
-                        columns[columnContainsDeletingRow].Remove(deletingRow);
+                    foreach (var columnContainsDeletingRow in _rows[deletingRow]) {
+                        _columns[columnContainsDeletingRow].Remove(deletingRow);
                     }
                 }
-                columns.Remove(column);
+                _columns.Remove(column);
             }
         }
 
-        public void DeleteRow(int row) {
+        public bool DeleteRow(int row) {
+            // deleting row and all intersections with it
+            // returns true if deleted successfully, false if 
+            // at least one column was covered earlier
+            foreach (var column in _rows[row]) {
+                if (!_columns.ContainsKey(column)) {
+                    return false;
+                }
+            }
             ExtractRow(row);
-            deletedColumns.Clear();
+            _deletedColumns.Clear();
+            return true;
         }
 
         private void InsertRow(int row) {
-            rows[row].Reverse();
-            foreach (var column in rows[row]) {
-                columns[column] = new HashSet<int>(deletedColumns.Pop());
+            _rows[row].Reverse();
+            foreach (var column in _rows[row]) {
+                _columns[column] = new HashSet<int>(_deletedColumns.Pop());
             }
 
-            foreach (var column in rows[row]) {
-                var columnElements = new HashSet<int>(columns[column]);
+            foreach (var column in _rows[row]) {
+                var columnElements = new HashSet<int>(_columns[column]);
                 foreach (var insertingRow in columnElements) {
-                    foreach (var columnToInsertRow in rows[insertingRow]) {
-                        columns[columnToInsertRow].Add(insertingRow);
+                    foreach (var columnToInsertRow in _rows[insertingRow]) {
+                        _columns[columnToInsertRow].Add(insertingRow);
                     }
                 }
             }
-            rows[row].Reverse();
+            _rows[row].Reverse();
         }
 
         public void Solve() {
-            if (columns.Count == 0) {
-                solved = true;
+            if (_columns.Count == 0) {
+                // input set is empty, we filled it
+                _solved = true;
                 return;
             }
-
+            
+            // searching for column with minimal count of items
             int minSize = 10000, minColumnNumber = -1;
-            foreach (var column in columns.Keys) {
-                if (columns[column].Count < minSize && columns[column].Count > 0) {
-                    minSize = columns[column].Count;
+            foreach (var column in _columns.Keys) {
+                if (_columns[column].Count < minSize && _columns[column].Count > 0) {
+                    minSize = _columns[column].Count;
                     minColumnNumber = column;
                 }
             }
-
+            
+            // if we have columns, but all of them are empty, then 
+            // we haven't subsets, but set wasn't filled, that's dead end
             if (minColumnNumber == -1) {
                 return;
             }
-
-            HashSet<int> minColumnRows = new HashSet<int>(columns[minColumnNumber]);
+            
+            HashSet<int> minColumnRows = new HashSet<int>(_columns[minColumnNumber]);
             foreach (int row in minColumnRows) {
-                answer.Push(row);
+                // try to take every row if this column to the answer,
+                // cover set with it, delete all intersecting rows and search answer
+                // recursively 
+                _answer.Push(row);
                 ExtractRow(row);
                 Solve();
-                if (solved) {
+                if (_solved) {
                     return;
                 }
+                // if we didn't find the answer with this row, return it 
+                // and all intersecting rows
                 InsertRow(row);
-                answer.Pop();
+                _answer.Pop();
             }
         }
 
         public Stack<int> GetAnswer() {
-            Console.WriteLine(solved);
-            return answer;
+            return _answer;
+        }
+
+        public bool SolutionFound() {
+            return _solved;
         }
     }
 }
