@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "meDWCoVhVmR3fnr2XzpTwtfDW0gTdGtqO9BZTh029ZSl2pmOvkmbrDjK5u9ufAVMXvgMHM5EXKNBU1ZC+1iuBg==",
+  "dgSpecHash": "tj2PIJFBGc/pyO3X/u2qZRIRiXZVZeMXDHFYyKIPHZ8D088fe2nrQOFuGG5HjHSdDUdDCX0QI0dX+BWsue33Yg==",
   "success": true,
-  "projectFilePath": "/Users/vadimkozlov/RiderProjects/Lab1/Lab1/Lab1.csproj",
+  "projectFilePath": "/Users/vadimkozlov/RiderProjects/CSharpLabs/Lab1/Lab1.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
