@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Specialized;
-using System.Numerics;
-using Microsoft.VisualBasic;
 
 namespace Task2 {
     class Program {
