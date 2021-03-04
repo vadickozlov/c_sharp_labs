@@ -1,0 +1,15 @@
+/Users/vadimkozlov/RiderProjects/CSharpLabs/Lab2/Task2/Task2/bin/Debug/net5.0/Task2.deps.json
+/Users/vadimkozlov/RiderProjects/CSharpLabs/Lab2/Task2/Task2/bin/Debug/net5.0/Task2.runtimeconfig.json
+/Users/vadimkozlov/RiderProjects/CSharpLabs/Lab2/Task2/Task2/bin/Debug/net5.0/Task2.runtimeconfig.dev.json
+/Users/vadimkozlov/RiderProjects/CSharpLabs/Lab2/Task2/Task2/bin/Debug/net5.0/Task2.dll
+/Users/vadimkozlov/RiderProjects/CSharpLabs/Lab2/Task2/Task2/bin/Debug/net5.0/ref/Task2.dll
+/Users/vadimkozlov/RiderProjects/CSharpLabs/Lab2/Task2/Task2/bin/Debug/net5.0/Task2.pdb
+/Users/vadimkozlov/RiderProjects/CSharpLabs/Lab2/Task2/Task2/obj/Debug/net5.0/Task2.csprojAssemblyReference.cache
+/Users/vadimkozlov/RiderProjects/CSharpLabs/Lab2/Task2/Task2/obj/Debug/net5.0/Task2.GeneratedMSBuildEditorConfig.editorconfig
+/Users/vadimkozlov/RiderProjects/CSharpLabs/Lab2/Task2/Task2/obj/Debug/net5.0/Task2.AssemblyInfoInputs.cache
+/Users/vadimkozlov/RiderProjects/CSharpLabs/Lab2/Task2/Task2/obj/Debug/net5.0/Task2.AssemblyInfo.cs
+/Users/vadimkozlov/RiderProjects/CSharpLabs/Lab2/Task2/Task2/obj/Debug/net5.0/Task2.csproj.CoreCompileInputs.cache
+/Users/vadimkozlov/RiderProjects/CSharpLabs/Lab2/Task2/Task2/obj/Debug/net5.0/Task2.dll
+/Users/vadimkozlov/RiderProjects/CSharpLabs/Lab2/Task2/Task2/obj/Debug/net5.0/ref/Task2.dll
+/Users/vadimkozlov/RiderProjects/CSharpLabs/Lab2/Task2/Task2/obj/Debug/net5.0/Task2.pdb
+/Users/vadimkozlov/RiderProjects/CSharpLabs/Lab2/Task2/Task2/obj/Debug/net5.0/Task2.genruntimeconfig.cache
