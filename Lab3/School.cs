@@ -3,19 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 
 namespace School {
-    public class Pupil : IComparable {
-        public int CompareTo(object o) {
-            Pupil? pupil = o as Pupil;
-            if (pupil == null) {
-                throw new Exception("Invalid comparing");
-            }
-            if (this.Surname.Equals(pupil.Surname)) {
-                return string.Compare(this.Name, pupil.Name);
-            }
-            else {
-                return string.Compare(this.Surname, pupil.Surname);
-            }
-        }
+    public class Human {
         private string _name;
         private string _surname;
         public string Name {
@@ -43,10 +31,27 @@ namespace School {
         public string ToString() {
             return _surname + " " + _name;
         }
-        public Pupil(string name, string surname) {
+
+        public Human(string name, string surname) {
             Name = name;
             Surname = surname;
         }
+    }
+
+    public class Pupil : Human, IComparable {
+        public int CompareTo(object o) {
+            Pupil? pupil = o as Pupil;
+            if (pupil == null) {
+                throw new Exception("Invalid comparing");
+            }
+            if (this.Surname.Equals(pupil.Surname)) {
+                return string.Compare(this.Name, pupil.Name);
+            }
+            else {
+                return string.Compare(this.Surname, pupil.Surname);
+            }
+        }
+        public Pupil(string name, string surname) : base(name, surname) { }
     }
     public class Form {
         private int _number;
@@ -108,10 +113,5 @@ namespace School {
             Letter = letter;
             _pupils = new List<Pupil>();
         }
-    }
-    public class School {
-        public static int AverageCount = 0;
-        private int Number { get; set; }
-        private string City { get; set; }
     }
 }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/vadimkozlov/RiderProjects/CSharpLabs/Lab3/Lab3/Lab3.csproj": {}
+    "/Users/vadimkozlov/RiderProjects/CSharpLabs/Lab3/Lab3.csproj": {}
   },
   "projects": {
-    "/Users/vadimkozlov/RiderProjects/CSharpLabs/Lab3/Lab3/Lab3.csproj": {
+    "/Users/vadimkozlov/RiderProjects/CSharpLabs/Lab3/Lab3.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/vadimkozlov/RiderProjects/CSharpLabs/Lab3/Lab3/Lab3.csproj",
+        "projectUniqueName": "/Users/vadimkozlov/RiderProjects/CSharpLabs/Lab3/Lab3.csproj",
         "projectName": "Lab3",
-        "projectPath": "/Users/vadimkozlov/RiderProjects/CSharpLabs/Lab3/Lab3/Lab3.csproj",
+        "projectPath": "/Users/vadimkozlov/RiderProjects/CSharpLabs/Lab3/Lab3.csproj",
         "packagesPath": "/Users/vadimkozlov/.nuget/packages/",
-        "outputPath": "/Users/vadimkozlov/RiderProjects/CSharpLabs/Lab3/Lab3/obj/",
+        "outputPath": "/Users/vadimkozlov/RiderProjects/CSharpLabs/Lab3/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/vadimkozlov/.nuget/NuGet/NuGet.Config"
