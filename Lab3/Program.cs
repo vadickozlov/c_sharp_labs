@@ -15,7 +15,7 @@ namespace Lab3 {
             Form form2 = new Form(5, 'B');
             form2.AddPupil(pupil3);
             form2.AddPupil(pupil4);
-            form2.AddPupil("Dmitriy", "Rad'kov");
+            form2.AddPupil(new Pupil("Timur", "Bibekov"));
             for (int i = 0; i < form1.PupilsCount; i++) {
                 Console.WriteLine(form1[i].ToString() + " ");
             }
