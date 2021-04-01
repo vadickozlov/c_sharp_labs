@@ -1,0 +1,7 @@
+C:\Users\Вадим\source\repos\ModuleMathProgram\ModuleMathProgram\bin\Debug\ModuleMathProgram.exe.config
+C:\Users\Вадим\source\repos\ModuleMathProgram\ModuleMathProgram\bin\Debug\ModuleMathProgram.exe
+C:\Users\Вадим\source\repos\ModuleMathProgram\ModuleMathProgram\bin\Debug\ModuleMathProgram.pdb
+C:\Users\Вадим\source\repos\ModuleMathProgram\ModuleMathProgram\obj\Debug\ModuleMathProgram.csprojAssemblyReference.cache
+C:\Users\Вадим\source\repos\ModuleMathProgram\ModuleMathProgram\obj\Debug\ModuleMathProgram.csproj.CoreCompileInputs.cache
+C:\Users\Вадим\source\repos\ModuleMathProgram\ModuleMathProgram\obj\Debug\ModuleMathProgram.exe
+C:\Users\Вадим\source\repos\ModuleMathProgram\ModuleMathProgram\obj\Debug\ModuleMathProgram.pdb

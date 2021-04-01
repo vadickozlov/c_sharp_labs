@@ -1,0 +1,16 @@
+C:\Users\Вадим\RiderProjects\KeyLogger2\KeyLogger2\bin\Debug\net5.0-windows\KeyLogger2.exe
+C:\Users\Вадим\RiderProjects\KeyLogger2\KeyLogger2\bin\Debug\net5.0-windows\KeyLogger2.deps.json
+C:\Users\Вадим\RiderProjects\KeyLogger2\KeyLogger2\bin\Debug\net5.0-windows\KeyLogger2.runtimeconfig.json
+C:\Users\Вадим\RiderProjects\KeyLogger2\KeyLogger2\bin\Debug\net5.0-windows\KeyLogger2.runtimeconfig.dev.json
+C:\Users\Вадим\RiderProjects\KeyLogger2\KeyLogger2\bin\Debug\net5.0-windows\KeyLogger2.dll
+C:\Users\Вадим\RiderProjects\KeyLogger2\KeyLogger2\bin\Debug\net5.0-windows\ref\KeyLogger2.dll
+C:\Users\Вадим\RiderProjects\KeyLogger2\KeyLogger2\bin\Debug\net5.0-windows\KeyLogger2.pdb
+C:\Users\Вадим\RiderProjects\KeyLogger2\KeyLogger2\obj\Debug\net5.0-windows\KeyLogger2.csprojAssemblyReference.cache
+C:\Users\Вадим\RiderProjects\KeyLogger2\KeyLogger2\obj\Debug\net5.0-windows\KeyLogger2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Вадим\RiderProjects\KeyLogger2\KeyLogger2\obj\Debug\net5.0-windows\KeyLogger2.AssemblyInfoInputs.cache
+C:\Users\Вадим\RiderProjects\KeyLogger2\KeyLogger2\obj\Debug\net5.0-windows\KeyLogger2.AssemblyInfo.cs
+C:\Users\Вадим\RiderProjects\KeyLogger2\KeyLogger2\obj\Debug\net5.0-windows\KeyLogger2.csproj.CoreCompileInputs.cache
+C:\Users\Вадим\RiderProjects\KeyLogger2\KeyLogger2\obj\Debug\net5.0-windows\KeyLogger2.dll
+C:\Users\Вадим\RiderProjects\KeyLogger2\KeyLogger2\obj\Debug\net5.0-windows\ref\KeyLogger2.dll
+C:\Users\Вадим\RiderProjects\KeyLogger2\KeyLogger2\obj\Debug\net5.0-windows\KeyLogger2.pdb
+C:\Users\Вадим\RiderProjects\KeyLogger2\KeyLogger2\obj\Debug\net5.0-windows\KeyLogger2.genruntimeconfig.cache
