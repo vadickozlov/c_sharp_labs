@@ -1,8 +1,8 @@
 using System;
 using System.Text;
 
-namespace School {
-    public class Human {
+namespace Lab {
+    public abstract class Human {
         private string _name;
         private string _surname;
         private int _age;
@@ -43,10 +43,10 @@ namespace School {
                 }
             }
         }
-        public string ToString() {
+        public override string ToString() {
             return _surname + " " + _name;
         }
-        public Human(string name, string surname, int age = 0) {
+        protected Human(string name, string surname, int age = 0) {
             Name = name;
             Surname = surname;
             Age = age;

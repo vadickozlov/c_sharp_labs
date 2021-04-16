@@ -1,31 +1,38 @@
 ﻿using System;
 using System.Collections.Generic;
-using School;
 
-namespace Lab3 {
+namespace Lab {
     class Program {
         static void Main(string[] args) {
             Pupil pupil1 = new Pupil("Vasiliy", "Petrov");
             Pupil pupil2 = new Pupil("Evgeniy", "Agazhelskiy");
             Pupil pupil3 = new Pupil("Alexey", "Ivanov");
             Pupil pupil4 = new Pupil("Boris", "Ivanov");
-            Form form1 = new Form(6, 'A');
-            form1.AddPupil(pupil1);
-            form1.AddPupil(pupil2);
-            Form form2 = new Form(5, 'B');
-            form2.AddPupil(pupil3);
-            form2.AddPupil(pupil4);
-            form2.AddPupil(new Pupil("Timur", "Bibekov"));
-            for (int i = 0; i < form1.PupilsCount; i++) {
-                Console.WriteLine(form1[i].ToString() + " ");
-            }
-            Console.WriteLine();
-            List<Pupil> form2Pupils = form2.GetPupils();
-            foreach (var pupil in form2Pupils) {
-                Console.WriteLine(pupil.ToString() + " ");
-            }
-            Console.WriteLine();
-            Console.WriteLine($"Maximal quantity of pupils is {Form.MaxPupilsCount}");
+            BaseForm form1 = new BaseForm(10, 'A');
+            form1.ChangeHoursOfSubject(Form.Subjects.Chemistry, 15);
+            form1.ChangeHoursOfSubject(Form.Subjects.History, 15);
+            form1.ChangeHoursOfSubject(Form.Subjects.Russian, 15);
+            form1.ChangeHoursOfSubject(Form.Subjects.Physics, 15);
+            form1.ChangeHoursOfSubject(Form.Subjects.Math, 15);
+            ProfileForm form2 = new ProfileForm(
+                form1, 
+                10, 
+                'B', 
+                Form.Subjects.Math, 
+                Form.Subjects.Physics, 
+                4, 
+                5);
+            Console.WriteLine(form2.CountOfEducationalHoursBySubject[Form.Subjects.History]);
+            Console.WriteLine(form2.CountOfEducationalHoursBySubject[Form.Subjects.Math]);
+            Console.WriteLine(form2.CountOfEducationalHoursBySubject[Form.Subjects.Physics]);
+            List<Form> schoolForms = new List<Form>();
+            schoolForms.Add(form1);
+            schoolForms.Add(form2);
+            schoolForms[1].Headman = pupil2;
+            form1.AddWastePaper(pupil1, 2);
+            form2.AddWastePaper(pupil4, 10);
+            MiddleSchoolForm form3 = new MiddleSchoolForm(5, 'B');
+            form3.AddWastePaper(pupil3, 5000);
         }
     }
 }

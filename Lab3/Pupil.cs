@@ -1,6 +1,6 @@
 using System;
 
-namespace School {
+namespace Lab {
     public class Pupil : Human, IComparable {
         public Form Form { get; internal set; }
         public int CompareTo(object o) {
@@ -8,13 +8,14 @@ namespace School {
                 throw new Exception("Invalid comparing");
             }
             if (this.Surname.Equals(pupil.Surname)) {
-                return string.Compare(this.Name, pupil.Name);
+                return string.Compare(Name, pupil.Name);
             } else {
                 return string.Compare(this.Surname, pupil.Surname);
             }
         }
-        public Pupil(string name, string surname, Form form = null, int age = 0) : base(name, surname, age) {
+        public Pupil(string name, string surname, int age = 0, Form form = null) : base(name, surname, age) {
             Form = form;
         }
+        
     }
 }
