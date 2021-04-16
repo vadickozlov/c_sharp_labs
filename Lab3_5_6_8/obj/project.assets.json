@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/vadimkozlov/RiderProjects/CSharpLabs/Lab3/Lab3.csproj",
-      "projectName": "Lab3",
-      "projectPath": "/Users/vadimkozlov/RiderProjects/CSharpLabs/Lab3/Lab3.csproj",
+      "projectUniqueName": "/Users/vadimkozlov/RiderProjects/CSharpLabs/Lab3_5_6_8/Lab3_5_6_8.csproj",
+      "projectName": "Lab3_5_6_8",
+      "projectPath": "/Users/vadimkozlov/RiderProjects/CSharpLabs/Lab3_5_6_8/Lab3_5_6_8.csproj",
       "packagesPath": "/Users/vadimkozlov/.nuget/packages/",
-      "outputPath": "/Users/vadimkozlov/RiderProjects/CSharpLabs/Lab3/obj/",
+      "outputPath": "/Users/vadimkozlov/RiderProjects/CSharpLabs/Lab3_5_6_8/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/vadimkozlov/.nuget/NuGet/NuGet.Config"
