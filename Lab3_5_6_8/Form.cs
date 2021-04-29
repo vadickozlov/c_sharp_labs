@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 
 namespace Lab {
-    public abstract class Form {
+    public abstract class Form : IPeopleContainable{
         protected int _number;
         protected char _letter;
         protected List<Pupil> _pupils;
@@ -72,5 +72,12 @@ namespace Lab {
             }
         }
 
+        public List<Human> GetPeople() {
+            List<Human> ret = new List<Human>();
+            for (int i = 0; i < _pupils.Count; i++) {
+                ret.Add(_pupils[i]);
+            }
+            return ret;
+        }
     }
 }
