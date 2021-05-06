@@ -17,7 +17,11 @@ namespace Lab {
             Pupil pupil2 = new Pupil("Evgeniy", "Agazhelskiy");
             Pupil pupil3 = new Pupil("Alexey", "Ivanov");
             Pupil pupil4 = new Pupil("Boris", "Ivanov");
+            pupil3.Age = 17;
             BaseForm form1 = new BaseForm(10, 'A');
+            form1.AddPupil(pupil1);
+            form1.AddPupil(pupil2);
+            form1.AddPupil(pupil3);
             form1.ChangeHoursOfSubject(Form.Subjects.Chemistry, 15);
             form1.ChangeHoursOfSubject(Form.Subjects.History, 15);
             form1.ChangeHoursOfSubject(Form.Subjects.Russian, 15);
@@ -29,7 +33,7 @@ namespace Lab {
                 'B', 
                 Form.Subjects.Math, 
                 Form.Subjects.Physics, 
-                4, 
+                4,
                 5);
             Console.WriteLine(form2.CountOfEducationalHoursBySubject[Form.Subjects.History]);
             Console.WriteLine(form2.CountOfEducationalHoursBySubject[Form.Subjects.Math]);
@@ -42,6 +46,7 @@ namespace Lab {
             form2.AddWastePaper(pupil4, 10);
             MiddleSchoolForm form3 = new MiddleSchoolForm(5, 'B');
             form3.AddWastePaper(pupil3, 5000);
+            Console.WriteLine(GetMaxAgeOfGroupOfPeople(form1));
         }
     }
 }

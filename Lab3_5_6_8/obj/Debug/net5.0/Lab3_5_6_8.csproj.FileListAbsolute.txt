@@ -1,0 +1,15 @@
+/Users/vadimkozlov/RiderProjects/CSharpLabs/Lab3_5_6_8/bin/Debug/net5.0/Lab3_5_6_8.deps.json
+/Users/vadimkozlov/RiderProjects/CSharpLabs/Lab3_5_6_8/bin/Debug/net5.0/Lab3_5_6_8.runtimeconfig.json
+/Users/vadimkozlov/RiderProjects/CSharpLabs/Lab3_5_6_8/bin/Debug/net5.0/Lab3_5_6_8.runtimeconfig.dev.json
+/Users/vadimkozlov/RiderProjects/CSharpLabs/Lab3_5_6_8/bin/Debug/net5.0/Lab3_5_6_8.dll
+/Users/vadimkozlov/RiderProjects/CSharpLabs/Lab3_5_6_8/bin/Debug/net5.0/ref/Lab3_5_6_8.dll
+/Users/vadimkozlov/RiderProjects/CSharpLabs/Lab3_5_6_8/bin/Debug/net5.0/Lab3_5_6_8.pdb
+/Users/vadimkozlov/RiderProjects/CSharpLabs/Lab3_5_6_8/obj/Debug/net5.0/Lab3_5_6_8.csprojAssemblyReference.cache
+/Users/vadimkozlov/RiderProjects/CSharpLabs/Lab3_5_6_8/obj/Debug/net5.0/Lab3_5_6_8.GeneratedMSBuildEditorConfig.editorconfig
+/Users/vadimkozlov/RiderProjects/CSharpLabs/Lab3_5_6_8/obj/Debug/net5.0/Lab3_5_6_8.AssemblyInfoInputs.cache
+/Users/vadimkozlov/RiderProjects/CSharpLabs/Lab3_5_6_8/obj/Debug/net5.0/Lab3_5_6_8.AssemblyInfo.cs
+/Users/vadimkozlov/RiderProjects/CSharpLabs/Lab3_5_6_8/obj/Debug/net5.0/Lab3_5_6_8.csproj.CoreCompileInputs.cache
+/Users/vadimkozlov/RiderProjects/CSharpLabs/Lab3_5_6_8/obj/Debug/net5.0/Lab3_5_6_8.dll
+/Users/vadimkozlov/RiderProjects/CSharpLabs/Lab3_5_6_8/obj/Debug/net5.0/ref/Lab3_5_6_8.dll
+/Users/vadimkozlov/RiderProjects/CSharpLabs/Lab3_5_6_8/obj/Debug/net5.0/Lab3_5_6_8.pdb
+/Users/vadimkozlov/RiderProjects/CSharpLabs/Lab3_5_6_8/obj/Debug/net5.0/Lab3_5_6_8.genruntimeconfig.cache
