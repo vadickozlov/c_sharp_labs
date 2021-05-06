@@ -3,6 +3,15 @@ using System.Collections.Generic;
 
 namespace Lab {
     class Program {
+        static int GetMaxAgeOfGroupOfPeople(IPeopleContainable container) {
+            List<Human> humans = container.GetPeople();
+            int maxAge = -1;
+            foreach (var human in humans) {
+                if (human.Age > maxAge) maxAge = human.Age;
+            }
+            return maxAge;
+        }
+
         static void Main(string[] args) {
             Pupil pupil1 = new Pupil("Vasiliy", "Petrov");
             Pupil pupil2 = new Pupil("Evgeniy", "Agazhelskiy");
