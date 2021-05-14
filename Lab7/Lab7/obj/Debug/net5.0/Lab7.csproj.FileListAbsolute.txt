@@ -1,0 +1,15 @@
+/Users/vadimkozlov/RiderProjects/CSharpLabs/Lab7/Lab7/bin/Debug/net5.0/Lab7.deps.json
+/Users/vadimkozlov/RiderProjects/CSharpLabs/Lab7/Lab7/bin/Debug/net5.0/Lab7.runtimeconfig.json
+/Users/vadimkozlov/RiderProjects/CSharpLabs/Lab7/Lab7/bin/Debug/net5.0/Lab7.runtimeconfig.dev.json
+/Users/vadimkozlov/RiderProjects/CSharpLabs/Lab7/Lab7/bin/Debug/net5.0/Lab7.dll
+/Users/vadimkozlov/RiderProjects/CSharpLabs/Lab7/Lab7/bin/Debug/net5.0/ref/Lab7.dll
+/Users/vadimkozlov/RiderProjects/CSharpLabs/Lab7/Lab7/bin/Debug/net5.0/Lab7.pdb
+/Users/vadimkozlov/RiderProjects/CSharpLabs/Lab7/Lab7/obj/Debug/net5.0/Lab7.csprojAssemblyReference.cache
+/Users/vadimkozlov/RiderProjects/CSharpLabs/Lab7/Lab7/obj/Debug/net5.0/Lab7.GeneratedMSBuildEditorConfig.editorconfig
+/Users/vadimkozlov/RiderProjects/CSharpLabs/Lab7/Lab7/obj/Debug/net5.0/Lab7.AssemblyInfoInputs.cache
+/Users/vadimkozlov/RiderProjects/CSharpLabs/Lab7/Lab7/obj/Debug/net5.0/Lab7.AssemblyInfo.cs
+/Users/vadimkozlov/RiderProjects/CSharpLabs/Lab7/Lab7/obj/Debug/net5.0/Lab7.csproj.CoreCompileInputs.cache
+/Users/vadimkozlov/RiderProjects/CSharpLabs/Lab7/Lab7/obj/Debug/net5.0/Lab7.dll
+/Users/vadimkozlov/RiderProjects/CSharpLabs/Lab7/Lab7/obj/Debug/net5.0/ref/Lab7.dll
+/Users/vadimkozlov/RiderProjects/CSharpLabs/Lab7/Lab7/obj/Debug/net5.0/Lab7.pdb
+/Users/vadimkozlov/RiderProjects/CSharpLabs/Lab7/Lab7/obj/Debug/net5.0/Lab7.genruntimeconfig.cache

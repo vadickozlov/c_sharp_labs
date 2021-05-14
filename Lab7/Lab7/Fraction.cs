@@ -1,4 +1,6 @@
 using System;
+using System.Runtime.InteropServices.ComTypes;
+using System.Text.RegularExpressions;
 
 namespace Lab7 {
     public class Fraction : IComparable<Fraction>, IFormattable, IConvertible, ICloneable {
@@ -8,8 +10,8 @@ namespace Lab7 {
         public Fraction() { }
 
         public Fraction(long numerator, long denominator = 1) {
-            Numerator = numerator;
             Denominator = denominator;
+            Numerator = numerator;
         }
 
         private double GetDouble() {
@@ -19,7 +21,7 @@ namespace Lab7 {
         private static long GCD(long a, long b) {
             a = Math.Abs(a);
             b = Math.Abs(b);
-            while (b > 0) {
+            while (a > 0 && b > 0) {
                 a %= b;
                 (a, b) = (b, a);
             }
@@ -43,15 +45,15 @@ namespace Lab7 {
         public long Denominator {
             get => _denominator;
             set {
-                if (_denominator == 0) {
+                if (value == 0) {
                     throw new Exception("Error. Division by zero");
                 }
                 _denominator = value;
                 if (_denominator < 0) {
-                    _denominator = -_denominator;
-                    _numerator = -_numerator;
+                    _denominator *= -1;
+                    _numerator *= -1;
                 }
-                Simplify();
+                if (_numerator != 0) Simplify();
             }
         }
 
@@ -62,12 +64,20 @@ namespace Lab7 {
             return thisNumerator.CompareTo(otherNumerator);
         }
 
+        public string ToString(string format) {
+            return ToString(format, null);
+        }
+
+        public override string ToString() {
+            return ToString("S");
+        }
+
         public string ToString(string format, IFormatProvider formatProvider) {
             // S - standard, D - double, M - mixed, I - integer 
             
             if (string.IsNullOrEmpty(format)) format = "S";
             if (format == "S") {
-                return $"{_numerator}/{_denominator}";
+                return $"{Numerator}/{Denominator}";
             }
 
             if (format == "D") {
@@ -80,7 +90,7 @@ namespace Lab7 {
                     return ToString("I", null);
                 }
                 if (Math.Abs(Numerator) > Denominator) {
-                    return $"{Numerator / Denominator}({Numerator % Denominator}/{Denominator})";
+                    return $"{Numerator / Denominator}({Math.Abs(Numerator) % Denominator}/{Denominator})";
                 }
 
                 return ToString("S", null);
@@ -91,6 +101,47 @@ namespace Lab7 {
             }
 
             throw new Exception("Unsupported format type");
+        }
+
+        public static bool TryParse(String s, out Fraction fr) {
+            fr = null;
+            Regex standardPattern = new Regex(@"^(-?\d+)/(\d+)$");
+            Regex mixedPattern = new Regex(@"^(-?\d+)\((\d+)/(\d+)\)$");
+            Regex doublePattern = new Regex(@"^(-?\d+)[,\.](\d+)$");
+            Regex integerPattern = new Regex(@"^(-?\d+)$");
+            if (standardPattern.IsMatch(s)) {
+                Match match = standardPattern.Match(s);
+                long num = long.Parse(match.Groups[1].Value);
+                long den = long.Parse(match.Groups[2].Value);
+                fr = new Fraction(num, den);
+                return true;
+            }
+            if (mixedPattern.IsMatch(s)) {
+                Match match = mixedPattern.Match(s);
+                long integer = long.Parse(match.Groups[1].Value);
+                long num = long.Parse(match.Groups[2].Value);
+                long den = long.Parse(match.Groups[3].Value);
+                int sign = (integer >= 0) ? 1 : -1;
+                fr = new Fraction(sign * (Math.Abs(integer) * den + num), den);
+                return true;
+            }
+            if (doublePattern.IsMatch(s)) {
+                double num = Double.Parse(s);
+                int den = 1;
+                while (num != (int)num) {
+                    num *= 10;
+                    den *= 10;
+                }
+
+                fr = new Fraction((int) num, den);
+                return true;
+            }
+            if (integerPattern.IsMatch(s)) {
+                long num = long.Parse(s);
+                fr = new Fraction(num);
+                return true;
+            }
+            return false;
         }
 
         public TypeCode GetTypeCode() {
@@ -181,7 +232,7 @@ namespace Lab7 {
             return fract.ToSingle(null);
         }
         
-        public static explicit operator double(Fraction fract) {
+        public static implicit operator double(Fraction fract) {
             return fract.ToDouble(null);
         }
         
