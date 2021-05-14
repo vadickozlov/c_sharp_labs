@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 
 namespace Lab {
-    public abstract class Form : IPeopleContainable{
+    public abstract class Form{
         protected int _number;
         protected char _letter;
         protected List<Pupil> _pupils;
@@ -70,14 +70,6 @@ namespace Lab {
             foreach (var item in Enum.GetValues(typeof(Subjects))) {
                 CountOfEducationalHoursBySubject.Add((Form.Subjects)item, 0);
             }
-        }
-
-        public List<Human> GetPeople() {
-            List<Human> ret = new List<Human>();
-            for (int i = 0; i < _pupils.Count; i++) {
-                ret.Add(_pupils[i]);
-            }
-            return ret;
         }
     }
 }

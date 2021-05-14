@@ -3,8 +3,6 @@ using System.Collections.Generic;
 
 namespace Lab {
     class Program {
-        static int GetMaxAgeOfGroupOfPeople(IPeopleContainable container) => container.GetPeople().Count;
-
         static void AddWastePaperToClasses(List<Pupil> pupils, List<Form> forms) {
             for (int i = 0; i < Math.Min(pupils.Count, forms.Count); i++) {
                 forms[i].AddWastePaper(pupils[i], i);
