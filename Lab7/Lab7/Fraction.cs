@@ -4,6 +4,10 @@ using System.Text.RegularExpressions;
 
 namespace Lab7 {
     public class Fraction : IComparable<Fraction>, IFormattable, IConvertible, ICloneable {
+        protected bool Equals(Fraction other) {
+            return CompareTo(other) == 0;
+        }
+
         private long _numerator;
         private long _denominator;
 
