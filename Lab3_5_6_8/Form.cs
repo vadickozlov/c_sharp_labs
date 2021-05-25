@@ -63,6 +63,13 @@ namespace Lab {
             set => _pupils[index] = value;
         }
 
+        public delegate void AnnouncementDelegate();
+
+        public void MakeAnAnnouncement(AnnouncementDelegate action) {
+            Console.WriteLine("Announcement: \n");
+            action();
+        }
+
         public Form(char letter) {
             Letter = letter;
             _pupils = new List<Pupil>();

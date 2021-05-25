@@ -15,7 +15,17 @@ namespace Lab {
             }
         }
 
+        static void DoTestAnnouncement() {
+            Console.WriteLine(DateTime.Now);
+            Console.WriteLine("This is announcement to test my delegate!");
+        }
+
         static void Main(string[] args) {
+            // ----------------------- //
+            //   Delegates - Form.cs   //
+            //   Events -  Pupil.cs    //
+            // ----------------------- //
+            
             Pupil pupil1 = new Pupil("Vasiliy", "Petrov");
             Pupil pupil2 = new Pupil("Evgeniy", "Agazhelskiy");
             Pupil pupil3 = new Pupil("Alexey", "Ivanov");
@@ -53,6 +63,8 @@ namespace Lab {
             Director director = new Director("Alena", "Eduardovna");
             List<ILeader> leaders = new List<ILeader>() {teacher, director};
             PunishPupilByGroupOfLeaders(pupil4, leaders);
+            Form.AnnouncementDelegate announcement = DoTestAnnouncement;
+            form1.MakeAnAnnouncement(announcement);
         }
     }
 }
